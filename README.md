@@ -88,7 +88,7 @@
         <td>18.89</td>
     </tr>
     <tr>
-        <tr style="background-color: #d9ead3;"> 
+        <tr style="background-color: #ADD8E6; font-weight: bold;"> 
         <td><strong>Boosting (GBM)</strong></td> 
         <td><strong>18.37</strong></td>
         <td><strong>18.47</strong></td>
