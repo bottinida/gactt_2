@@ -13,7 +13,7 @@
 
 
 <h3>Data Collection and Preprocessing</h3>
-<p>The dataset initially contained 4,042 observations with 118 variables, including demographic details and coffee-tasting results. After filtering out missing values and irrelevant fields, the dataset was reduced to 3,972 observations and 58 variables. The response variable, representing coffee roast preference (light, medium, dark, or no preference), was central to my analysis.</p>
+<p>The dataset initially contained 4,042 observations with 118 variables, including demographic details and coffee-tasting results. After filtering out missing values and irrelevant fields, the dataset was reduced to 3,972 observations and 58 variables. The response variable represents coffee roast preference (light, medium, dark, or no preference).</p>
 
 <p><strong>Exploratory Data Analysis (EDA):</strong></p>
 <p>During the EDA phase, I used both graphical and statistical methods to uncover key relationships and insights within the data. Here are some of the highlights:</p>
