@@ -3,7 +3,7 @@
 
 <p>This part of the project explores how consumer characteristics and coffee preferences influence their choice of coffee roasting levels. The analysis was conducted using the dataset collected from The Great American Taste Test, where participants shared their tasting preferences across different coffee varieties. 
   
-<strong>Objective:</strong> I sought to identify patterns that might predict a consumer’s roasting preference—light, medium, or dark—based on their demographics and coffee consumption habits using machine learning techniques.</p>
+<strong>Objective:</strong> I sought to identify patterns that might predict a consumer’s roasting preference (light, medium, or dark) based on their demographics and coffee consumption habits using machine learning techniques.</p>
 
 <h2>Project Overview</h2>
 <ul>
