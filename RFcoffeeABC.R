@@ -34,12 +34,31 @@ str(gactt)
 #barplot
 barplot(table(gactt$coffee_preference_ABC), main = "ABC Coffee preference distribution", xlab = "Coffee Preference", ylab = "Frequency", ylim = c(0, 2000))
 
-
 #correlation matrix
 gactt_num <- as.data.frame(lapply(gactt, as.numeric))
 cor_matrix <- cor(gactt_num)
-corrplot(cor_matrix, method = "ellipse")
 
+cor_long <- as.data.frame(as.table(cor_matrix))  #Convert matrix to a long table format for top 10 sorting
+names(cor_long) <- c("Var1", "Var2", "Correlation")
+
+#Triangle format for the sake of visualization
+cor_long <- cor_long[as.numeric(as.factor(cor_long$Var1)) < as.numeric(as.factor(cor_long$Var2)), ]
+
+#Determine strongest correlation
+cor_long <- cor_long[order(-abs(cor_long$Correlation)), ]
+top_ten_corr <- head(cor_long, 10)
+print(top_ten_corr)
+
+#Viz
+cor_matrix[lower.tri(cor_matrix, diag = TRUE)] <- NA
+corrplot(
+  cor_matrix,
+  method = "square",
+  type = "upper",
+  tl.col = "black",
+  na.label = " ",
+  tl.cex = 0.8
+  )
 
 ## Split to training and testing subset 
 split_gactt <- sort(sample(3972,1191, replace = FALSE)) 
@@ -273,7 +292,32 @@ new_labels <- apply(y1hat,c(1, 3), function(x) {
 
 new_labels <- as.factor(new_labels)
 sum(new_labels != labels_train)/length(labels_train) ##Training error = [1] 0.1837469
-corr_matrix <- cor(gactt)
+
+#Correlation matrix
+gactt_num_corr <- as.data.frame(lapply(gactt, as.numeric))
+corr_matrix <- cor(gactt_num_corr)
+
+corr_long <- as.data.frame(as.table(corr_matrix))  # Convert matrix to a long table format for top 10 sorting
+names(corr_long) <- c("Var1", "Var2", "Correlation")
+
+#Triangle format for the sake of visualization
+corr_long <- corr_long[as.numeric(as.factor(corr_long$Var1)) < as.numeric(as.factor(corr_long$Var2)), ] 
+
+# Determine strongest corr
+corr_long <- corr_long[order(-abs(corr_long$Correlation)), ]
+top_10_corr <- head(corr_long, 10)
+print(top_10_corr)
+
+corr_matrix[lower.tri(corr_matrix, diag = TRUE)] <- NA
+
+corrplot(
+  corr_matrix,
+  method = "square",                  
+  type = "upper",                     
+  tl.col = "black",                   
+  tl.cex = 0.8,                       
+  na.label = " "                     
+)
 
 #testing error
 pred_boost_test <- predict(gbm_abc, newdata = gactt_test_model)
