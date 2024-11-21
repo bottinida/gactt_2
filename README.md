@@ -23,9 +23,9 @@
 </ul>
 
 <p align="center">
-    <img src="https://i.imgur.com/N9NIebt.png" height="50%" width="50%" alt="Coffee Preference Distribution"/>
+    <img src="https://i.imgur.com/pcsFJgL.png" height="60%" width="60%" alt="Coffee Roast Preference Distribution"/>
     <br/>
-    <span style="font-style: italic; color: gray;">Coffee Preference Distribution</span>
+    <span style="font-style: italic; color: gray;">Coffee Roast Preference Distribution</span>
 </p>
 
 <h3>Methods and Results</h3>
