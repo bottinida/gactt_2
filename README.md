@@ -18,7 +18,7 @@
 <p><strong>Exploratory Data Analysis (EDA):</strong></p>
 <p>During the EDA phase, I used both graphical and statistical methods to uncover key relationships and insights within the data. Here are some of the highlights:</p>
 <ul>
-    <li><strong>Correlation Analysis</strong>: I examined the relationships between demographic factors, coffee knowledge levels, and roast preferences. Expertise level and coffee origin knowledge showed a mild inverse correlation with roast preference, while the overall favorite coffee attribute correlated positively.</li>
+    <li><strong>Correlation Analysis</strong>: I examined the relationships between demographic factors, coffee knowledge levels, and roast preferences. No variables showed a clear inverse or positive correlation with roast preference.</li>
     <li><strong>Preference Distribution</strong>: Below is the distribution of preferences for each roast level, indicating distinct consumer inclinations for light, medium, and dark roasts.</li>
 </ul>
 
